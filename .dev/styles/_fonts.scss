@@ -1,0 +1,13 @@
+// @fonts
+$fontsPath: "../fonts";
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700|Roboto:300,400,500,700,900');
+
+@mixin oswald($fw: 400) {
+    font-family: 'Oswald', sans-serif;
+    font-weight: $fw
+}
+
+@mixin roboto($fw: 400) {
+    font-family: 'Roboto', sans-serif;
+    font-weight: $fw
+}
