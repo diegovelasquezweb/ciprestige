@@ -10,11 +10,12 @@
   });
   $('.brands__slider').slick({
     infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: 5,
+    slidesToScroll: 5,
     dots: true,
     autoplay: true,
     autoplaySpeed: 4000,
+    dotsClass: 'brands--pagination'
  
   });
 
@@ -32,7 +33,8 @@
        autoplaySpeed: 4000,
        dots: true,
        fade: true,
-       swipeToSlide: true
+       swipeToSlide: true,
+       dotsClass: 'banner--pagination'
     });
  
     function doAnimations(elements) {

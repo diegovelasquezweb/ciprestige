@@ -1,5 +1,5 @@
 <h2>Productos Destacados</h2>
-<div class="container grid--start">
+<div class="container grid--center">
 
 
   <?php

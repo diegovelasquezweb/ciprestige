@@ -1,7 +1,4 @@
-$blue: #016BB5;
-$blue: rgb(1, 107, 181);
-$gray: #333;
-$i: !important;
+
 html,
 body {
   font-family: 'Roboto', sans-serif;
@@ -9,6 +6,12 @@ body {
 
 .header {
   box-shadow: 0px 2px 3px rgba(0, 0, 0, .3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: white;
   .header__top {
     background: $blue;
     color: white;
@@ -20,15 +23,58 @@ body {
       }
     }
     .header__contact {
-      background: $blue - 20;
-      padding: 5px 20px;
-      transition: .3s;
-      &:hover {
-        background: $blue - 30;
-      }
       span {
         margin-left: 10px;
         font-size: 13px;
+      }
+      a {
+        padding: 10px 20px;
+        background: $blue - 30;
+        transition: all .3s;
+        &:hover {
+          background: $blue - 45;
+        }
+      }
+      .social--link {
+        background: $blue - 20;
+        padding: 0 15px;
+        transition: all .3s;
+        &:hover {
+          background: $blue - 35;
+        }
+      }
+      .catalogo {
+        background: $blue - 10;
+        transition: all .3s;
+        text-transform: uppercase;
+        &:hover {
+          background: $blue - 25;
+        }
+      }
+      
+    }
+    .header__cart {
+      margin-right: 15px;
+    }
+    .header__search {
+      flex: 1;
+      margin-right: 30px;
+      .aws-container {
+        width: 100%;
+      }
+      form {
+        margin: 0;
+      }
+      input {
+        border: none;
+        background: none;
+        box-shadow: none;
+        height: 100%;
+        background: #f2f2f2;
+        transition: all .3s;
+        &:focus {
+          background: #e2e2e2;
+        }
       }
     }
   }
@@ -64,7 +110,7 @@ body {
     }
   }
   .header__bottom {
-    padding: 5px 10px;
+    padding: 5px 10px 0;
     .header__search {
       background: #f2f2f2;
       .aws-container {
@@ -90,6 +136,8 @@ section.banner {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    position: relative;
+    z-index: 9;
   }
   .caption {
     position: absolute;
@@ -98,6 +146,8 @@ section.banner {
     width: 100%;
     height: 100%;
     pointer-events: none;
+    z-index: 99;
+    
   }
   .banner__caption {
     position: absolute;
@@ -105,16 +155,55 @@ section.banner {
     right: 0;
     width: 40%;
     padding: 50px;
-    background: rgba(1, 107, 181, .5);
+    background-color: rgba(1, 107, 181, .5);
+    // background-image: url('../images/pattern1.png');
+    background-position: center center;
+    text-align: left;
+    z-index: 999;
+    a {
+      pointer-events: fill;
+      display: inline-block;
+      margin-top: 20px;
+    }
   }
-  h1 {
-    color: white;
-    font-size: 24px;
-    line-height: 150%;
-    margin: 0;
+  h2 {
+    font-size: 24px$i;
+    line-height: 150% $i;
+    margin: 0 0 20px $i;
+    color: white $i;
+    border: none $i;
+    padding: 0 $i;
+    text-align: left $i;
   }
   p {
     color: white;
+    font-weight: 300;
+  }
+  .banner--pagination {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    li {
+      display: inline-block;
+    }
+    li.slick-active {
+      button {
+        background: $blue;
+        border: 2px solid white;
+      }
+    }
+    button {
+      font-size: 0;
+      background: white;
+      border-radius: 100%;
+      width: 18px;
+      height: 18px;
+      margin: 0 5px;
+      border: 2px solid $blue;
+    }
   }
 }
 
@@ -247,7 +336,7 @@ section.parallax {
     }
     figcaption {
       position: relative;
-      padding: 70px 0;
+      padding: 40px 0;
       height: 100%;
       z-index: 99;
       color: white;
@@ -359,6 +448,99 @@ section.brands {
   .slick-initialized .slick-slide {
     display: flex;
   }
+  .brands--pagination {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    li {
+      display: inline-block;
+    }
+    li.slick-active {
+      button {
+        background: $blue;
+        border: 2px solid $blue;
+      }
+    }
+    button {
+      font-size: 0;
+      background: white;
+      border-radius: 100%;
+      width: 12px;
+      height: 12px;
+      margin: 0 5px;
+      border: 2px solid $blue;
+    }
+  }
+}
+
+section.newsletter {
+  background: $blue + 20;
+  h3 {
+    color: white;
+    margin: 0;
+    padding-right: 30px;
+    text-align: left;
+    @include oswald(700);
+    font-size: 20px;
+    line-height: 100%;
+  }
+  .form {
+    flex: 1;
+    padding: 30px 0;
+    form {
+      margin: 0;
+    }
+    input[type=email] {
+      width: 100%;
+      transition: all .3s;
+    }
+    input[type=submit] {
+      background: $blue;
+      transition: all .3s;
+      color: white;
+      text-transform: uppercase;
+      font-size: 12px;
+      background-image: url('../images/pattern1.png');
+      background-position: center center;
+      &:hover {
+        background: $blue - 10;
+      }
+    }
+    div.wpcf7 {
+      width: 100%;
+    }
+    .wpcf7-form-control-wrap {
+      flex: 1;
+    }
+  }
+}
+
+footer {
+  background: $blue;
+  padding: 20px 0;
+  color: white;
+  font-size: 12px;
+  a {
+    color: white;
+    transition: all .3s;
+    &:hover {
+      color: $blue + 100;
+    }
+  }
+  span {
+    margin: 0 10px;
+    display: block;
+  }
+}
+$headerheight: 115px;
+header {
+  height: $headerheight;
+}
+main {
+  margin-top: $headerheight
 }
 main.home {
   text-align: center;
@@ -380,6 +562,8 @@ main.home {
 }
 
 
+
+
 // @pisados
 .site-header-cart .cart-contents {
   padding: 0 $i;
@@ -389,12 +573,33 @@ main.home {
   color: black $i;
 }
 
-.aws-container .aws-search-field,
+// .aws-container .aws-search-field,
 .aws-container,
 .aws-search-form {
   height: 100%;
 }
 
+.aws-container .aws-search-field {
+  padding: 0 30px;
+  font-size: 14px;
+  position: relative;
+}
+
+.aws-search-form::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  content: "\f002";
+  color: $blue;
+  font-size: 20px;
+  text-align: center;
+  font-family: "FontAwesome";
+  z-index: 99;
+}
 .slick-dotted.slick-slider {
   margin: 0;
 }
@@ -403,8 +608,19 @@ main.home {
   bottom: 0;
 }
 
-
+.site-header-cart .cart-contents .count {
+  margin-right: 10px;
+}
+.woocommerce-mini-cart__empty-message {
+  color: black;
+  font-size: 12px;
+  @include roboto(500);
+}
+.site-header-cart .widget_shopping_cart {
+  background-color: white $i;
+}
 // @ocultos
 .wcppec-cart-widget-button {
   display: none;
 }
+

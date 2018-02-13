@@ -1,5 +1,5 @@
 <h2>noticias y Eventos</h2>
-<div class="container grid--start">
+<div class="container grid--center">
 <?php
 $args = array(
   'post_type'   => 'events-post',

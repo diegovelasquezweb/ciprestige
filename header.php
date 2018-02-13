@@ -24,9 +24,17 @@
 	<header id="masthead" class="header" role="banner">
 		<div class="header__top">
 			<div class="container grid">
-				<div class="header__contact centerBox">
+				<div class="header__contact grid">
 					<a href=""><i class="fa fa-envelope"></i><span>CONTACTO</span></a>
+					<a href="" class="social--link centerBox"><i class="fa fa-facebook"></i></a>
+					<a href="" class="social--link centerBox"><i class="fa fa-instagram"></i></a>
+					<a href="" class="catalogo"><i class="fa fa-download "></i><span>Catálogo digital</span></a>
 				</div>
+				<div class="header__search centerBox">
+
+<?php echo do_shortcode( '[aws_search_form]' ); ?> 
+
+</div>
 		
 				<div class="header__cart centerBox">
 					<?php storefront_header_cart(); ?>
@@ -39,6 +47,9 @@
 
 				<div class="header__menu centerBox">
 					<ul class="grid--center"> 
+					<li>
+							<a href="">inicio</a>
+						</li>
 						<li>
 							<a href="<?= get_home_url() ?>/shop">Tienda</a>
 							<ul class="submenu">
@@ -49,7 +60,7 @@
 							<a href="">Estudiantes</a>
 						</li>
 						<li>
-							<a href="">Promociones</a>
+							<a href="">Novedades</a>
 						</li>
 						<li>
 							<a href="">Distribuidores</a>
@@ -72,7 +83,7 @@
 			</div>
 
 		</div>
-		<div class="header__bottom">
+		<!-- <div class="header__bottom">
 			<div class="container">
 		<div class="header__search centerBox">
 
@@ -81,7 +92,7 @@
 				</div>
 				</div>
 
-		</div>
+		</div> -->
 	</header>
 
 

@@ -1,37 +1,16 @@
-<?php
-/**
- * The template for displaying the footer.
- *
- * Contains the closing of the #content div and all content after
- *
- * @package storefront
- */
+<footer>
+	<div class="container grid">
+		<div class="copyright">
+			<?php echo  date("Y"); ?> Todos los derechos reservados
+		</div>
+		<div class="privacy grid--end">
+			<a href="">Politica de Garantías</a><span>|</span>
+			<a href="">Política de Calidad</a><span>|</span>
+			<a href="">Política de tratamiento de datos</a>
+		</div>
+	</div>
 
-?>
-
-		</div><!-- .col-full -->
-	</div><!-- #content -->
-
-	<?php do_action( 'storefront_before_footer' ); ?>
-
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="col-full">
-
-			<?php
-			/**
-			 * Functions hooked in to storefront_footer action
-			 *
-			 * @hooked storefront_footer_widgets - 10
-			 * @hooked storefront_credit         - 20
-			 */
-			do_action( 'storefront_footer' ); ?>
-
-		</div><!-- .col-full -->
-	</footer><!-- #colophon -->
-
-	<?php do_action( 'storefront_after_footer' ); ?>
-
-</div><!-- #page -->
+</footer>
 
 <?php wp_footer(); ?>
 

@@ -9,6 +9,7 @@
 
 body {
   overflow-x: hidden;
+  line-height: normal;
 }
 
 ul {
@@ -213,5 +214,24 @@ a {
 .text-align-center {
   text-align: center;
 }
+$blue: #016BB5;
+$blue: rgb(1, 107, 181);
+$gray: #333;
+$i: !important;
 
+.btn--white {
+  padding: 15px 30px;
+  color: white;
+  border: 1px solid white;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: all .3s;
+  border-radius: 2px;
+  &:hover {
+    background: white;
+    color: $blue;
+  }
 
+}
