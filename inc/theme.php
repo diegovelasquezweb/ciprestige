@@ -32,10 +32,12 @@ add_action( 'init', 'register_menus' );
 if( function_exists('acf_add_options_sub_page') ) {
 	$parent = acf_add_options_page(array(
 		'page_title' 	=> 'Theme General Settings',
-		'menu_title' 	=> 'Theme Options',
+		'menu_title' 	=> 'Mercadeo',
 		'redirect' 		=> false,
 		'position' 		=> 20,
-    'icon' 			=> false,
+		'icon_url' => 'dashicons-images-alt2', // Add this line and replace the second inverted commas with class of the icon you like
+		'position' => 7
+	
 	));
 }
 

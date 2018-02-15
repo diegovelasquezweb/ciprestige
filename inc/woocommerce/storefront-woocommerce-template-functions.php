@@ -15,8 +15,13 @@ if ( ! function_exists( 'storefront_before_content' ) ) {
 	 */
 	function storefront_before_content() {
 		?>
+		<div class="filter__products">
+			<div class="container"><?php echo do_shortcode( '[woof]' ); ?> </div>
+		</div>
+		<div class="container">
+		
 		<div id="primary" class="content-area">
-			<main id="main" class="site-main" role="main">
+			<main id="main" class="site-main tienda" role="main">
 		<?php
 	}
 }
@@ -33,7 +38,7 @@ if ( ! function_exists( 'storefront_after_content' ) ) {
 		?>
 			</main><!-- #main -->
 		</div><!-- #primary -->
-
+		</div>
 		<?php do_action( 'storefront_sidebar' );
 	}
 }

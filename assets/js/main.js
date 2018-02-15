@@ -19,6 +19,21 @@
  
   });
 
+  $("#menu--trigger, #open-submenu").on({
+    mouseenter: function(e) {
+      $(".submenu").addClass("active");
+    },
+    mouseleave: function(e) {
+      $(".submenu").removeClass("active");
+    }
+  });
+
+  // $(document).on("click", ".open-submenu", function(event) {
+  //   event.preventDefault();
+  //   var id = $(this).attr("data-id");
+  //   $("#" + id).addClass("active");
+  // });
+
   $(document).ready(function() {
     $('#hero-slider').on('init', function(e, slick) {
         var $firstAnimatingElements = $('div.hero-slide:first-child').find('[data-animation]');
