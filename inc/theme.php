@@ -112,4 +112,13 @@ add_action('admin_enqueue_scripts', 'wc_default_variation_stock_quantity');
             </script>
             <?php
         }
-    }
+	}
+	
+	add_filter( 'woocommerce_product_tabs', 'bbloomer_remove_product_tabs', 98 );
+ 
+function bbloomer_remove_product_tabs( $tabs ) {
+    unset( $tabs['additional_information'] ); 
+    return $tabs;
+}
+
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );

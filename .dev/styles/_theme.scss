@@ -702,24 +702,27 @@ main.home {
     font-size: 16px;
     @include oswald(600);
     text-transform: uppercase;
-    margin: 16px 0 0;
+    margin: 16px 30px 0 0;
   }
   .woof {
+    margin: 12px 0 0 0;
     flex: 1;
-    margin: 12px 0 0 30px;
+    width: 70%;
   }
   .woof_redraw_zone {
     @extend .grid;
+
   }
   .woof_container {
     margin: 0;
     padding: 0;
     flex: 1;
+  
     &:nth-of-type(1) {
-      margin-right: 15px;
+      margin-right: 0px;
     }
     &:nth-of-type(2) {
-      margin-left: 15px;
+      margin-left: 30px;
     }
   }
   .woof_submit_search_form_container {
@@ -748,7 +751,7 @@ main.home {
 
 .woocommerce-products-header {
   text-align: left $i;
-  @include oswald(700);
+
   text-transform: uppercase;
   padding: 0 $i;
   margin: 20px 0;
@@ -756,6 +759,8 @@ main.home {
   h1 {
     font-size: 30px;
     color: $blue;
+    @include oswald(600);
+    letter-spacing: .5px;
   }
 }
 
