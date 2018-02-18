@@ -45,10 +45,10 @@
             <div class="header__menu centerBox">
               <ul class="grid--center">
                 <li>
-                  <a href="">inicio</a>
+                  <a href="<?= get_home_url() ?>/">inicio</a>
                 </li>
                 <li class="" id="open-submenu">
-                  <a  class="" href="<?= get_home_url() ?>/shop">Tienda</a>
+                  <a  class="" href="<?= get_home_url() ?>/tienda">Tienda</a>
                   <ul class="submenu grid">
                     <div class="submenu__container">
                       <?php
@@ -72,10 +72,10 @@ if( have_rows('publicidad_menu', 'option') ): while ( have_rows('publicidad_menu
                   </ul>
                 </li>
                 <li>
-                  <a href="">Estudiantes</a>
+                  <a href="<?= get_home_url() ?>/categoria/estudiantes/">Estudiantes</a>
                 </li>
                 <li>
-                  <a href="">Novedades</a>
+                  <a href="">Nosotros</a>
                 </li>
                 <li>
                   <a href="">Distribuidores</a>

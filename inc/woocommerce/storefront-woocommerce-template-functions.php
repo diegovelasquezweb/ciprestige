@@ -15,8 +15,8 @@ if ( ! function_exists( 'storefront_before_content' ) ) {
 	 */
 	function storefront_before_content() {
 		?>
-		<div class="filter__products">
-			<div class="container"><?php echo do_shortcode( '[woof]' ); ?> </div>
+		<div class="filter__products ">
+			<div class="container grid"><h2 class="">Busca tu producto</h2><?php echo do_shortcode( '[woof]' ); ?> </div>
 		</div>
 		<div class="container">
 		
