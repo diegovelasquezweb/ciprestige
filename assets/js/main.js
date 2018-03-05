@@ -19,6 +19,18 @@
  
   });
 
+  $(document).on('click touch', ".open-contact", function (e) {
+    $('header .contact').addClass('active');
+    $('header .overlay-contact').addClass('active');
+
+  });
+
+  $(document).on('click touch', ".overlay-contact, .close-contact", function (e) {
+    $('header .contact').removeClass('active');
+    $('header .overlay-contact').removeClass('active');
+
+  });
+
   $("#menu--trigger, #open-submenu").on({
     mouseenter: function(e) {
       $(".submenu").addClass("active");
