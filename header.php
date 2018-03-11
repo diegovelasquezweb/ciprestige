@@ -37,7 +37,7 @@
             <div class="header__search centerBox">
               <?php echo do_shortcode( '[aws_search_form]' ); ?>
             </div>
-            <a href="" class="header__account grid--center"><i class="fa fa-unlock-alt "></i><span>MI CUENTA</span></a>
+            <a href="<?= get_home_url() ?>/mi-cuenta" class="header__account grid--center"><i class="fa fa-unlock-alt "></i><span>MI CUENTA</span></a>
             <div class="header__cart centerBox">
               <?php storefront_header_cart(); ?>
             </div>
@@ -46,6 +46,7 @@
         <div class="header__center">
           <div class="container grid">
             <div class="header__logo"><a href="<?= get_home_url() ?>/"><img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png' ?>" alt=""></a></div>
+            <div class="header__bars centerBox"><i class="fa fa-bars"></i></div>  
             <div class="header__menu centerBox">
               <ul class="grid--center">
                 <li class="" id="open-submenu">
@@ -54,6 +55,9 @@
                     <div class="submenu__container">
                     <li>
                   <a href="<?= get_home_url() ?>/nosotros">Nosotros</a>
+                </li>
+                <li>
+                  <a href="<?= get_home_url() ?>/tienda">Tienda</a>
                 </li>
                 <li>
                   <a href="<?= get_home_url() ?>/distribuidores">Distribuidores</a>
@@ -107,7 +111,29 @@ if ( $count > 0 ){
      <div class="contact__item"><span><i class="fa fa-whatsapp"></i></span> <a href="tel:2122262">3123505610</a></div>
      <div class="contact__item"><span><i class="fa fa-skype"></i></span> <a href="tel:2122262">mercadeo.ciprestige</a></div>
      <div class="contact__item"><span><i class="fa fa-map-marker"></i></span> <span>Cra 28Bis #51 -98 | Barrio Galerias | Bogotá, Colombia</span></div>
-    <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d591.1456546223661!2d-74.07744113184182!3d4.640741791585452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bccb9e6547f%3A0x1b72d7bda2d1f788!2sCra.+28+Bis+%2351-98%2C+Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1491859921808" width="350" height="250" frameborder="0" style="border: 0;" allowfullscreen="allowfullscreen"></iframe></div>
+    <div class="map"><div id="map">
+    <script>
+      function initMap() {
+        var uluru = {lat: 4.643496, lng: -74.077578};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: uluru,
+          panControl: true,
+          streetViewControl: true
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+      <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeMbgN2YmRbLmJG60NbcWyAporQvoVAms&callback=initMap">
+    </script>
+    
+    </div>
+    
+    </div>
     <div class="form">
     <p>Nuestro equipo de ventas esta esperando para ayudarte.</p>
     <?php echo do_shortcode( '  [contact-form-7 id="147" title="Contact form 1"]' ); ?>

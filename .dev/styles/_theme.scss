@@ -72,8 +72,6 @@ body {
         &:hover {
           background: $blue + 10;
         }
-
-
       }
     }
     .header__cart {
@@ -148,17 +146,25 @@ body {
         transition: all .3s;
         opacity: 0;
         pointer-events: none;
+        background: #f2f2f2;
         &.active {
           bottom: -270px;
           opacity: 1;
           pointer-events: fill;
         }
         li {
-          margin: 0 0 10px;
+          margin: 0px 0;
+          border-top: thin solid #ccc;
+          &:nth-of-type(5) {
+            border-bottom: thin solid #ccc;
+          }
           a {
             color: $gray;
             font-size: 14px;
             transition: all .3s;
+            padding: 10px 0;
+            display: block;
+            text-transform: uppercase;
             &:hover {
               color: $blue;
             }
@@ -1016,7 +1022,6 @@ footer {
       font-weight: 300 $i;
     }
   }
-
   .posted_in:last-child {
     border-bottom: thin dotted $borderColor $i;
   }
@@ -1107,6 +1112,7 @@ ul.products li.product .woocommerce-LoopProduct-link {
 .single-product div.product .product_meta {
   border: none $i;
 }
+
 .filesProduct {
   width: 20%;
   height: 160px;
@@ -1138,7 +1144,7 @@ ul.products li.product .woocommerce-LoopProduct-link {
   margin: 0 10px 20px;
   padding: 0;
   iframe {
-   height: 240px;
+    height: 240px;
   }
   h3 {
     font-size: 16px;
@@ -1156,12 +1162,11 @@ ul.products li.product .woocommerce-LoopProduct-link {
 }
 
 header section.contact {
-
   width: 500px;
   height: 100%;
   position: fixed;
   top: 0;
-  right: -100%;
+  right: -200%;
   z-index: 99999;
   background: white;
   transition: all .3s;
@@ -1204,13 +1209,16 @@ header section.contact {
     span {
       margin-right: 10px;
     }
-
   }
   .map {
     border: 3px solid #ccc;
     padding: 0px;
     margin: 20px 0;
     height: 146px;
+    #map {
+      height: 140px;
+      width: 100%;
+     }
     iframe {
       width: 100%;
       height: 140px;
@@ -1237,7 +1245,6 @@ header section.contact {
       transition: all .3s;
       padding: 7px;
       font-size: 13px;
-
     }
     textarea {
       background: #f2f2f2;
@@ -1269,6 +1276,7 @@ header section.contact {
     }
   }
 }
+
 .overlay-contact {
   width: 100%;
   height: 100%;
@@ -1276,7 +1284,6 @@ header section.contact {
   top: 0;
   right: -100%;
   z-index: 9999;
-
   background: black;
   cursor: pointer;
   opacity: .3;
@@ -1321,7 +1328,9 @@ header section.contact {
   }
 }
 
-main.nosotros {
+main.nosotros,
+main.dealers,
+main.account {
   margin-top: $headerheight;
   padding-bottom: 40px;
   h1 {
@@ -1334,7 +1343,6 @@ main.nosotros {
     text-transform: uppercase;
     margin: 0;
   }
-
 }
 
 main.nosotros {
@@ -1347,5 +1355,94 @@ main.nosotros {
   p {
     font-size: 14px;
     color: $gray;
+  }
+}
+
+main.dealers,
+main.account {
+  .form {
+    width: 50%;
+    padding: 30px;
+    label {
+      color: white;
+      display: block;
+      margin: 0;
+    }
+    p {
+      margin: 0;
+      span {
+        display: block;
+        margin: 10px 0 10px;
+      }
+    }
+    input {
+      width: 100%;
+    }
+    input[type=submit] {
+      width: auto;
+      margin: 20px 0 0;
+      background: $blue - 50;
+      color: white;
+
+    }
+  }
+  .register {
+    background: $blue + 20;
+    h2 {
+      color: white;
+    }
+  }
+  .login {
+    background: #f2f2f2;
+    label {
+      color: black;
+      display: block;
+      margin: 10px 0;
+    }
+    .login-remember {
+      display: none;
+    }
+    input {
+      background: #f9f9f9;
+      border: 1px solid #ccc;
+    }
+  }
+}
+
+main.account,
+main.dealers {
+  .woocommerce {
+    h2,
+    .woocommerce-form__label-for-checkbox {
+      display: none !important;
+    }
+    label {
+      color: black;
+      span {
+        display: inline-block;
+      }
+    }
+    button {
+      width: auto;
+      margin: 20px 0 0;
+      background: $blue - 50;
+      color: white;
+
+    }
+    .lost_password {
+
+      display: block;
+      margin: 20px 0 0;
+  
+    }
+    a {
+      color: $blue;
+      &:hover {
+        color: $blue - 20;
+      }
+    }
+    .form-row-first {
+      width: 100%;
+    }
   }
 }
