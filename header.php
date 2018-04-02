@@ -31,13 +31,13 @@
               <a href="" class="social--link centerBox"><i class="fa fa-facebook"></i></a>
               <a href="" class="social--link centerBox"><i class="fa fa-instagram"></i></a>
               <a href="" class="catalogo"><i class="fa fa-download "></i><span>Catálogo digital</span></a>
-              <a href="<?= get_home_url() ?>/distribuidores" class="dealers"><i class="fa fa-user "></i><span>Distribuidores</span></a>
+              <a href="<?= get_home_url() ?>/distribuidores" class="dealers"><i class="fa fa-user-circle-o" aria-hidden="true"></i><span>Distribuidores</span></a>
     
             </div>
             <div class="header__search centerBox">
               <?php echo do_shortcode( '[aws_search_form]' ); ?>
             </div>
-            <a href="<?= get_home_url() ?>/mi-cuenta" class="header__account grid--center"><i class="fa fa-unlock-alt "></i><span>MI CUENTA</span></a>
+            <a href="<?= get_home_url() ?>/mi-cuenta" class="header__account grid--center"><i class="fa fa-user "></i><span>MI CUENTA</span></a>
             <div class="header__cart centerBox">
               <?php storefront_header_cart(); ?>
             </div>
@@ -46,57 +46,17 @@
         <div class="header__center">
           <div class="container grid">
             <div class="header__logo"><a href="<?= get_home_url() ?>/"><img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png' ?>" alt=""></a></div>
-            <div class="header__bars centerBox"><i class="fa fa-bars"></i></div>  
+            <div class="header__bars centerBox open-menuMobile"><i class="fa fa-bars"></i></div>  
             <div class="header__menu centerBox">
-              <ul class="grid--center">
-                <li class="" id="open-submenu">
-                <a href="<?= get_home_url() ?>/">inicio</a>
-                  <ul class="submenu grid">
-                    <div class="submenu__container">
-                    <li>
-                  <a href="<?= get_home_url() ?>/nosotros">Nosotros</a>
-                </li>
-                <li>
-                  <a href="<?= get_home_url() ?>/tienda">Tienda</a>
-                </li>
-                <li>
-                  <a href="<?= get_home_url() ?>/distribuidores">Distribuidores</a>
-                </li>
-                <li>
-                <a href="">Mi cuenta</a>
-                  <!-- <a href="<?= get_home_url() ?>/my-account">Mi cuenta</a> -->
-                </li>
-                <li>
-                  <a class="open-contact">Contacto</a>
-                </li>
-                    </div>
-                    <?php
-if( have_rows('publicidad_menu', 'option') ): while ( have_rows('publicidad_menu', 'option') ) : the_row(); ?>
-                      <div class="sponsor "><a target="_blank" href="<?php the_sub_field('link_menu', 'option'); ?>"><img src="<?php the_sub_field('imagen_menu', 'option'); ?>" alt=""></a></div>
-                        <?php endwhile; endif; ?>
-                  </ul>
-                </li>
-                <?php
-$args = array(
-    'orderby'    => 'title',
-    'order'      => 'ASC',
-    'hide_empty' => true
-);
-$product_categories = get_terms( 'product_cat', $args );
-$count = count($product_categories);
-if ( $count > 0 ){
-    foreach ( $product_categories as $product_category ) { 
-        echo '<li><a href="' . get_term_link( $product_category ) . '">' . $product_category->name . '</a></li>';
-    }
-} ?>
-    
-
-                
-              </ul>
+            <?php get_template_part( 'partials/menu' ); ?>
               </div>
             </div>
           </div>
 
+<div class="menu-mobile">
+<?php get_template_part( 'partials/menu-mobile' ); ?>
+
+</div>
 <div class="overlay-contact"></div>
     <section class="contact">
     <h2>Contacto</h2>

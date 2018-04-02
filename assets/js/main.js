@@ -15,7 +15,27 @@
     dots: true,
     autoplay: true,
     autoplaySpeed: 4000,
-    dotsClass: 'brands--pagination'
+    dotsClass: 'brands--pagination',
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      }
+    ]
  
   });
 
@@ -23,6 +43,17 @@
     $('header .contact').addClass('active');
     $('header .overlay-contact').addClass('active');
 
+  });
+
+
+  $(document).on('click touch', ".open-menuMobile", function (e) {
+    $('header .menu-mobile').addClass('active');
+  
+  });
+
+  $(document).on('click touch', ".close-menuMobile", function (e) {
+    $('header .menu-mobile').removeClass('active');
+  
   });
 
   $(document).on('click touch', ".overlay-contact, .close-contact", function (e) {

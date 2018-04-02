@@ -4,6 +4,18 @@ require get_template_directory() . '/inc/enqueue.php';
 require get_template_directory() . '/inc/theme.php';
 require get_template_directory() . '/inc/remove.php';
 require get_template_directory() . '/inc/post-type.php';
+
+function admin_style() {
+	wp_enqueue_style('admin-styles', get_template_directory_uri().'/admin.css');
+  }
+  add_action('admin_enqueue_scripts', 'admin_style');
+
+  function custom_login_logo() {
+    echo '<style type ="text/css">.login h1 a { display:none!important; }</style>';
+}
+
+add_action('login_head', 'custom_login_logo');
+
 /**
  * Storefront engine room
  *

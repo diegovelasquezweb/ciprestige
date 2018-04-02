@@ -1,0 +1,19 @@
+/* #adminmenuwrap, .role-editor #adminmenuwrap, .role-subscriber #adminmenuwrap {
+    display: none;
+}
+
+#adminmenuback, .role-editor #adminmenuback, .role-subscriber #adminmenuback {
+    display: none;
+}
+
+#wpcontent, .role-editor #wpcontent, .role-subscriber #wpcontent {
+    margin-left: 0;
+} */
+
+#wp-admin-bar-wp-logo,
+#wp-admin-bar-comments,
+#wp-admin-bar-new-content,
+#screen-meta-links {
+    display: none;
+}
+

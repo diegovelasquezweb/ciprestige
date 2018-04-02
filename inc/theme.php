@@ -1,5 +1,10 @@
 <?php
 
+add_filter('wwp_filter_wholesale_price_title_text', 'override_wholesale_text', 10, 1);
+ 
+function override_wholesale_text($wholesaletext) {
+    return 'Precio distribuidor:';
+}
 //@Yoast Seo Support
 add_theme_support( 'title-tag' );
 
@@ -150,3 +155,4 @@ function ciprestige_woocommerce_image_dimensions() {
 	update_option( 'shop_thumbnail_image_size', $thumbnail ); 	// Image gallery thumbs
 }
 add_action( 'after_switch_theme', 'ciprestige_woocommerce_image_dimensions', 1 );
+
