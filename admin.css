@@ -1,4 +1,4 @@
-/* #adminmenuwrap, .role-editor #adminmenuwrap, .role-subscriber #adminmenuwrap {
+#adminmenuwrap, .role-editor #adminmenuwrap, .role-subscriber #adminmenuwrap {
     display: none;
 }
 
@@ -8,12 +8,17 @@
 
 #wpcontent, .role-editor #wpcontent, .role-subscriber #wpcontent {
     margin-left: 0;
-} */
+}
 
 #wp-admin-bar-wp-logo,
 #wp-admin-bar-comments,
 #wp-admin-bar-new-content,
-#screen-meta-links {
+#screen-meta-links,
+#wp-admin-bar-site-name {
     display: none;
 }
 
+.form-field._sold_individually_field,
+.form-field._backorders_field  {
+    display: none !important;
+}

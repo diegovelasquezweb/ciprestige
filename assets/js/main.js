@@ -62,14 +62,20 @@
 
   });
 
-  $("#menu--trigger, #open-submenu").on({
-    mouseenter: function(e) {
-      $(".submenu").addClass("active");
-    },
-    mouseleave: function(e) {
-      $(".submenu").removeClass("active");
-    }
-  });
+  // $(".open-submenu").on({
+  //   mouseenter: function(e) {
+  //     $('this').children(".submenu").addClass("active");
+  //   },
+  //   mouseleave: function(e) {
+  //     $(".submenu").removeClass("active");
+  //   }
+  // });
+
+  $(".open-submenu").hover(function () { //When trigger is hovered...
+    $(this).children(".submenu").addClass("active");
+}, function () {
+    $(this).children(".submenu").removeClass("active");
+});
 
   // $(document).on("click", ".open-submenu", function(event) {
   //   event.preventDefault();

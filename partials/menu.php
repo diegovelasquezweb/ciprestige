@@ -1,5 +1,5 @@
 <ul class="grid--center">
-                <li class="" id="open-submenu">
+                <li class="open-submenu" id="">
                 <a href="<?= get_home_url() ?>/">inicio</a>
                   <ul class="submenu grid">
                     <div class="submenu__container">
@@ -22,12 +22,116 @@
                 </li>
                     </div>
                     <?php
-if( have_rows('publicidad_menu', 'option') ): while ( have_rows('publicidad_menu', 'option') ) : the_row(); ?>
+                      if( have_rows('publicidad_menu', 'option') ): while ( have_rows('publicidad_menu', 'option') ) : the_row(); ?>
                       <div class="sponsor "><a target="_blank" href="<?php the_sub_field('link_menu', 'option'); ?>"><img src="<?php the_sub_field('imagen_menu', 'option'); ?>" alt=""></a></div>
                         <?php endwhile; endif; ?>
                   </ul>
                 </li>
-                <?php
+
+            <li class="open-submenu" ><a href="<?= get_home_url() ?>/categoria/diagnostico/">Diagnóstico</a>
+            <ul class="submenu short grid">
+                    <div class="submenu__container">
+                    <li>
+                  <a href="<?= get_home_url() ?>/tienda">Subcategoria</a>
+                </li>
+                
+                <li>
+                  <a href="<?= get_home_url() ?>/tienda">Subcategoria</a>
+                </li>
+                
+       
+                    </div>
+                  </ul>
+          
+          
+          </li>
+            <li class="open-submenu" ><a href="<?= get_home_url() ?>/categoria/instrumental/">Instrumental</a>          <ul class="submenu short grid">
+                    <div class="submenu__container">
+                    <li>
+                  <a href="<?= get_home_url() ?>/tienda">Subcategoria</a>
+                </li>
+                
+                <li>
+                  <a href="<?= get_home_url() ?>/tienda">Subcategoria</a>
+                </li>
+                
+       
+                    </div>
+                  </ul></li>
+            <li class="open-submenu" ><a href="<?= get_home_url() ?>/categoria/cuidado-en-casa/">Cuidado en casa</a>          <ul class="submenu short grid">
+                    <div class="submenu__container">
+                    <li>
+                  <a href="<?= get_home_url() ?>/tienda">Subcategoria</a>
+                </li>
+                
+                <li>
+                  <a href="<?= get_home_url() ?>/tienda">Subcategoria</a>
+                </li>
+                
+       
+                    </div>
+                  </ul></li>
+            <li class="open-submenu" ><a href="<?= get_home_url() ?>/categoria/movilidad/">Movilidad</a>          <ul class="submenu short grid">
+                    <div class="submenu__container">
+                    <li>
+                  <a href="<?= get_home_url() ?>/tienda">Subcategoria</a>
+                </li>
+                
+                <li>
+                  <a href="<?= get_home_url() ?>/tienda">Subcategoria</a>
+                </li>
+                
+       
+                    </div>
+                  </ul></li>
+            <li class="open-submenu" ><a href="<?= get_home_url() ?>/categoria/fisioterapia/">Fisioterapia</a>          <ul class="submenu short grid">
+                    <div class="submenu__container">
+                    <li>
+                  <a href="<?= get_home_url() ?>/tienda">Subcategoria</a>
+                </li>
+                
+                <li>
+                  <a href="<?= get_home_url() ?>/tienda">Subcategoria</a>
+                </li>
+                
+       
+                    </div>
+                  </ul></li>
+            <li class="open-submenu" ><a href="<?= get_home_url() ?>/categoria/linea-institucional/">Línea Institucional</a>          <ul class="submenu short grid">
+                    <div class="submenu__container">
+                    <li>
+                  <a href="<?= get_home_url() ?>/tienda">Subcategoria</a>
+                </li>
+                
+                <li>
+                  <a href="<?= get_home_url() ?>/tienda">Subcategoria</a>
+                </li>
+                
+       
+                    </div>
+                  </ul></li>
+            <li class="open-submenu" ><a href="<?= get_home_url() ?>/categoria/estudiantes/">Estudiantes</a><ul class="submenu short grid">
+                    <div class="submenu__container">
+                    <li>
+                  <a href="<?= get_home_url() ?>/tienda">Subcategoria</a>
+                </li>
+                
+                <li>
+                  <a href="<?= get_home_url() ?>/tienda">Subcategoria</a>
+                </li>
+                
+       
+                    </div>
+                  </ul></li>       
+
+
+
+
+
+              </ul>
+
+
+                              <!-- < ?php
 $args = array(
 
 );
@@ -38,7 +142,4 @@ if ( $count > 0 ){
         echo '<li><a href="' . get_term_link( $product_category ) . '">' . $product_category->name . '</a></li>';
     }
 } ?>
-    
-
-                
-              </ul>
+     -->

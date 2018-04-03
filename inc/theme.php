@@ -1,7 +1,32 @@
 <?php
 
 add_filter('wwp_filter_wholesale_price_title_text', 'override_wholesale_text', 10, 1);
- 
+ // add a link to the WP Toolbar
+function custom_toolbar_link($wp_admin_bar) {
+	$args = array(
+		'id' => 'dashboard',
+		'title' => 'Escritorio', 
+		'href' => 'http://66.7.216.113/~ciprestige/admin'
+	);
+	$wp_admin_bar->add_node($args);
+}
+add_action('admin_bar_menu', 'custom_toolbar_link', 1);
+
+ // add a link to the WP Toolbar
+function custom_toolbar_link2($wp_admin_bar) {
+	$args = array(
+		'id' => 'page',
+		'title' => 'Ver Pagina', 
+		'href' => 'http://66.7.216.113/~ciprestige',
+		'meta' => array(
+			'target' => '_blank',
+		)
+
+	);
+	$wp_admin_bar->add_node($args);
+}
+add_action('admin_bar_menu', 'custom_toolbar_link2', 2);
+
 function override_wholesale_text($wholesaletext) {
     return 'Precio distribuidor:';
 }
@@ -94,7 +119,7 @@ add_action('admin_enqueue_scripts', 'wc_default_variation_stock_quantity');
     {
         global $pagenow, $woocommerce;
  
-        $default_stock_quantity = 500;
+        $default_stock_quantity = 50;
         $screen = get_current_screen();
  
         if ( $pagenow == 'post-new.php' && $screen->post_type == 'product')

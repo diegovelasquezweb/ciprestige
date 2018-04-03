@@ -74,9 +74,6 @@ body {
         }
       }
     }
-    .header__cart {
-      margin-right: 15px;
-    }
     .header__search {
       flex: 1;
       .aws-container {
@@ -118,12 +115,12 @@ body {
           margin: 0 2px;
           @extend .centerBox;
           >a {
-            color: $gray;
+            color: $blue;
             font-size: 13.2px;
             text-transform: uppercase;
             padding: 10px;
             border-radius: 3px;
-            font-weight: 400;
+            font-weight: 600;
             transition: all .3s;
             letter-spacing: .2px;
             &:hover {
@@ -152,6 +149,9 @@ body {
           opacity: 1;
           pointer-events: fill;
         }
+        &.short {
+          width: 300px;
+        }
         li {
           margin: 0px 0;
           border-top: thin solid #ccc;
@@ -160,10 +160,11 @@ body {
           }
           a {
             color: $gray;
-            font-size: 14px;
+            font-size: 13px;
             transition: all .3s;
             padding: 10px 0;
             display: block;
+            font-weight: 600;
             text-transform: uppercase;
             &:hover {
               color: $blue;
@@ -679,10 +680,11 @@ main.home {
 }
 
 .site-header-cart .widget_shopping_cart {
-  top: 46px $i;
+  top: 52px $i;
   width: 200px $i;
   background: $blue $i; // left: 0 $i;
   border: 1px solid $blue + 40;
+  margin-left: -20px;
 }
 
 .woocommerce-mini-cart__total {
@@ -696,7 +698,6 @@ main.home {
   justify-content: center;
   align-items: center;
   align-content: center;
-  padding-left: 30px $i
 }
 
 .site-header-cart .cart-contents:after {
@@ -1219,7 +1220,7 @@ header section.contact {
     #map {
       height: 140px;
       width: 100%;
-     }
+    }
     iframe {
       width: 100%;
       height: 140px;
@@ -1386,7 +1387,6 @@ main.account {
       margin: 20px 0 0;
       background: $blue - 50;
       color: white;
-
     }
   }
   .register {
@@ -1430,13 +1430,10 @@ main.dealers {
       margin: 20px 0 0;
       background: $blue - 50;
       color: white;
-
     }
     .lost_password {
-
       display: block;
       margin: 20px 0 0;
-  
     }
     a {
       color: $blue;
@@ -1477,6 +1474,7 @@ main.news-detail {
     margin-bottom: 30px;
   }
 }
+
 main.account {
   .woocommerce-form-row {
     width: 100% $i;
@@ -1484,27 +1482,38 @@ main.account {
 }
 
 .payment_method_other_payment {
-  textarea, .required {
+  textarea,
+  .required {
     display: none;
   }
 }
 
 main.cart .advert {
-display: block;
-position: relative;
-margin: 30px 0 0;
-background: $blue;
-color: white;
-padding: 15px;
-text-align: center;
-i {
-  margin-right: 20px;
-}
-
+  display: block;
+  position: relative;
+  margin: 30px 0 0;
+  background: $blue;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  i {
+    margin-right: 20px;
+  }
 }
 
 main.account .wpcf7-response-output {
   color: white;
   padding: 10px;
   text-align: center;
+}
+
+.woocommerce-message {
+  background: #7ac143;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.header .header__top .header__cart {
+  padding: 0 15px;
+  background: #7ac143;
 }
