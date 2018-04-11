@@ -133,7 +133,7 @@ body {
       .submenu {
         position: absolute;
         width: 930px;
-        bottom: -300px;
+        top: 0;
         left: 0;
         list-style: none;
         margin: 0;
@@ -145,12 +145,13 @@ body {
         pointer-events: none;
         background: #f2f2f2;
         &.active {
-          bottom: -270px;
+          top: 62px;
           opacity: 1;
           pointer-events: fill;
         }
         &.short {
           width: 300px;
+          height: auto;
         }
         li {
           margin: 0px 0;
@@ -1508,9 +1509,10 @@ main.account .wpcf7-response-output {
 }
 
 .woocommerce-message {
-  background: #7ac143;
+  background: #7ac143 $i;
   font-size: 18px;
   font-weight: bold;
+
 }
 
 .header .header__top .header__cart {

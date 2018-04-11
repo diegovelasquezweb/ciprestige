@@ -30,99 +30,76 @@
 
             <li class="open-submenu" ><a href="<?= get_home_url() ?>/categoria/diagnostico/">Diagnóstico</a>
             <ul class="submenu short grid">
-                    <div class="submenu__container">
-                    <li>
-                  <a href="<?= get_home_url() ?>/tienda">Subcategoria</a>
-                </li>
-                
-                <li>
-                  <a href="<?= get_home_url() ?>/tienda">Subcategoria</a>
-                </li>
-                
-       
-                    </div>
-                  </ul>
-          
-          
+              <div class="submenu__container">
+              <?php $wcatTerms = get_terms('product_cat', array('hide_empty' => 0, 'orderby' => 'ASC', 'parent' => 21, ));
+              foreach($wcatTerms as $wcatTerm) : ?>
+              <li>
+                <a href="<?php echo get_term_link( $wcatTerm->slug, $wcatTerm->taxonomy ); ?>"><?php echo $wcatTerm->name; ?></a>
+              </li>
+              <?php endforeach; ?>
+              </div>
+            </ul>
           </li>
-            <li class="open-submenu" ><a href="<?= get_home_url() ?>/categoria/instrumental/">Instrumental</a>          <ul class="submenu short grid">
-                    <div class="submenu__container">
-                    <li>
-                  <a href="<?= get_home_url() ?>/tienda">Subcategoria</a>
-                </li>
-                
-                <li>
-                  <a href="<?= get_home_url() ?>/tienda">Subcategoria</a>
-                </li>
-                
-       
-                    </div>
-                  </ul></li>
-            <li class="open-submenu" ><a href="<?= get_home_url() ?>/categoria/cuidado-en-casa/">Cuidado en casa</a>          <ul class="submenu short grid">
-                    <div class="submenu__container">
-                    <li>
-                  <a href="<?= get_home_url() ?>/tienda">Subcategoria</a>
-                </li>
-                
-                <li>
-                  <a href="<?= get_home_url() ?>/tienda">Subcategoria</a>
-                </li>
-                
-       
-                    </div>
-                  </ul></li>
-            <li class="open-submenu" ><a href="<?= get_home_url() ?>/categoria/movilidad/">Movilidad</a>          <ul class="submenu short grid">
-                    <div class="submenu__container">
-                    <li>
-                  <a href="<?= get_home_url() ?>/tienda">Subcategoria</a>
-                </li>
-                
-                <li>
-                  <a href="<?= get_home_url() ?>/tienda">Subcategoria</a>
-                </li>
-                
-       
-                    </div>
-                  </ul></li>
-            <li class="open-submenu" ><a href="<?= get_home_url() ?>/categoria/fisioterapia/">Fisioterapia</a>          <ul class="submenu short grid">
-                    <div class="submenu__container">
-                    <li>
-                  <a href="<?= get_home_url() ?>/tienda">Subcategoria</a>
-                </li>
-                
-                <li>
-                  <a href="<?= get_home_url() ?>/tienda">Subcategoria</a>
-                </li>
-                
-       
-                    </div>
-                  </ul></li>
+            <li class="open-submenu" ><a href="<?= get_home_url() ?>/categoria/instrumental/">Instrumental</a>      <ul class="submenu short grid">
+              <div class="submenu__container">
+              <?php $wcatTerms = get_terms('product_cat', array('hide_empty' => 0, 'orderby' => 'ASC', 'parent' => 33, ));
+              foreach($wcatTerms as $wcatTerm) : ?>
+              <li>
+                <a href="<?php echo get_term_link( $wcatTerm->slug, $wcatTerm->taxonomy ); ?>"><?php echo $wcatTerm->name; ?></a>
+              </li>
+              <?php endforeach; ?>
+              </div>
+            </ul></li>
+            <li class="open-submenu" ><a href="<?= get_home_url() ?>/categoria/cuidado-en-casa/">Cuidado en casa</a><ul class="submenu short grid">
+              <div class="submenu__container">
+              <?php $wcatTerms = get_terms('product_cat', array('hide_empty' => 0, 'orderby' => 'ASC', 'parent' => 22, ));
+              foreach($wcatTerms as $wcatTerm) : ?>
+              <li>
+                <a href="<?php echo get_term_link( $wcatTerm->slug, $wcatTerm->taxonomy ); ?>"><?php echo $wcatTerm->name; ?></a>
+              </li>
+              <?php endforeach; ?>
+              </div>
+            </ul></li>
+            <li class="open-submenu" ><a href="<?= get_home_url() ?>/categoria/movilidad/">Movilidad</a><ul class="submenu short grid">
+              <div class="submenu__container">
+              <?php $wcatTerms = get_terms('product_cat', array('hide_empty' => 0, 'orderby' => 'ASC', 'parent' => 23, ));
+              foreach($wcatTerms as $wcatTerm) : ?>
+              <li>
+                <a href="<?php echo get_term_link( $wcatTerm->slug, $wcatTerm->taxonomy ); ?>"><?php echo $wcatTerm->name; ?></a>
+              </li>
+              <?php endforeach; ?>
+              </div>
+            </ul></li>
+            <li class="open-submenu" ><a href="<?= get_home_url() ?>/categoria/fisioterapia/">Fisioterapia</a><ul class="submenu short grid">
+              <div class="submenu__container">
+              <?php $wcatTerms = get_terms('product_cat', array('hide_empty' => 0, 'orderby' => 'ASC', 'parent' => 34, ));
+              foreach($wcatTerms as $wcatTerm) : ?>
+              <li>
+                <a href="<?php echo get_term_link( $wcatTerm->slug, $wcatTerm->taxonomy ); ?>"><?php echo $wcatTerm->name; ?></a>
+              </li>
+              <?php endforeach; ?>
+              </div>
+            </ul></li>
             <li class="open-submenu" ><a href="<?= get_home_url() ?>/categoria/linea-institucional/">Línea Institucional</a>          <ul class="submenu short grid">
-                    <div class="submenu__container">
-                    <li>
-                  <a href="<?= get_home_url() ?>/tienda">Subcategoria</a>
-                </li>
-                
-                <li>
-                  <a href="<?= get_home_url() ?>/tienda">Subcategoria</a>
-                </li>
-                
-       
-                    </div>
-                  </ul></li>
+              <div class="submenu__container">
+              <?php $wcatTerms = get_terms('product_cat', array('hide_empty' => 0, 'orderby' => 'ASC', 'parent' => 35, ));
+              foreach($wcatTerms as $wcatTerm) : ?>
+              <li>
+                <a href="<?php echo get_term_link( $wcatTerm->slug, $wcatTerm->taxonomy ); ?>"><?php echo $wcatTerm->name; ?></a>
+              </li>
+              <?php endforeach; ?>
+              </div>
+            </ul></li>
             <li class="open-submenu" ><a href="<?= get_home_url() ?>/categoria/estudiantes/">Estudiantes</a><ul class="submenu short grid">
-                    <div class="submenu__container">
-                    <li>
-                  <a href="<?= get_home_url() ?>/tienda">Subcategoria</a>
-                </li>
-                
-                <li>
-                  <a href="<?= get_home_url() ?>/tienda">Subcategoria</a>
-                </li>
-                
-       
-                    </div>
-                  </ul></li>       
+              <div class="submenu__container">
+              <?php $wcatTerms = get_terms('product_cat', array('hide_empty' => 0, 'orderby' => 'ASC', 'parent' => 24, ));
+              foreach($wcatTerms as $wcatTerm) : ?>
+              <li>
+                <a href="<?php echo get_term_link( $wcatTerm->slug, $wcatTerm->taxonomy ); ?>"><?php echo $wcatTerm->name; ?></a>
+              </li>
+              <?php endforeach; ?>
+              </div>
+            </ul></li>       
 
 
 

@@ -30,9 +30,9 @@
               <a class="open-contact"><i class="fa fa-envelope"></i><span>CONTACTO</span></a>
               <a href="" class="social--link centerBox"><i class="fa fa-facebook"></i></a>
               <a href="" class="social--link centerBox"><i class="fa fa-instagram"></i></a>
-              <a href="" class="catalogo"><i class="fa fa-download "></i><span>Catálogo digital</span></a>
+              <a target="_blank" href="<?php the_field('catalogo','options') ?>" class="catalogo 11"><i class="fa fa-download "></i><span>Catálogo digital</span></a>
               <a href="<?= get_home_url() ?>/distribuidores" class="dealers"><i class="fa fa-user-circle-o" aria-hidden="true"></i><span>Distribuidores</span></a>
-    
+              
             </div>
             <div class="header__search centerBox">
               <?php echo do_shortcode( '[aws_search_form]' ); ?>
