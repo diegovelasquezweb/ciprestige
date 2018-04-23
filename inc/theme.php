@@ -61,7 +61,7 @@ add_action( 'init', 'register_menus' );
 
 if( function_exists('acf_add_options_sub_page') ) {
 	$parent = acf_add_options_page(array(
-		'page_title' 	=> 'Theme General Settings',
+		'page_title' 	=> 'Mercadeo',
 		'menu_title' 	=> 'Mercadeo',
 		'redirect' 		=> false,
 		'position' 		=> 20,

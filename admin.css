@@ -1,4 +1,4 @@
-/* #adminmenuwrap, .role-editor #adminmenuwrap, .role-subscriber #adminmenuwrap {
+#adminmenuwrap, .role-editor #adminmenuwrap, .role-subscriber #adminmenuwrap {
     display: none;
 }
 
@@ -22,4 +22,4 @@
 .form-field._sold_individually_field,
 .form-field._backorders_field  {
     display: none !important;
-} */
+}

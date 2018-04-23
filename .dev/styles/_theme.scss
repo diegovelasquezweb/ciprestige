@@ -150,13 +150,12 @@ body {
           pointer-events: fill;
         }
         &.short {
-          width: 300px;
           height: auto;
         }
         li {
           margin: 0px 0;
           border-top: thin solid #ccc;
-          &:nth-of-type(5) {
+          &:nth-last-child(){
             border-bottom: thin solid #ccc;
           }
           a {
@@ -802,11 +801,19 @@ main.home {
 .wcppec-cart-widget-button,
 .woocommerce-breadcrumb,
 .woocommerce-products-headerx,
-.columns-4 .storefront-sorting,
 .storefront-sorting {
   display: none;
 }
-
+.columns-4 .storefront-sorting {
+  display: block;
+  form,
+  p {
+    display: none;
+  }
+}
+.malinky-ajax-pagination-loading img {
+  display: inline-block;
+}
 main.tienda {
   ul.products li.product {
     border: 1px solid #ddd;
@@ -1163,8 +1170,38 @@ ul.products li.product .woocommerce-LoopProduct-link {
 .otherPosts {
   display: none;
 }
+header.maintenance {
+ text-align: center;
+ background: white;
+ height: auto $i;
+ img {
+   display: inline-block;
+   margin: 20px 0;
+ }
+}
+body.maintenance {
+  background-image: url('http://66.7.216.113/~ciprestige/wp-content/themes/ciprestige/assets/images/banner1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 
-header section.contact {
+}
+main.maintenance.active {
+  right: 50% $i;
+  margin-right: -250px $i;
+  height: 440px $i;
+  top: 50% $i;
+  margin-top: -220px $i; 
+  .alert {
+    text-align: center;
+    font-size: 20px;
+    color: $blue;
+    font-weight: 700;
+  }
+
+}
+header section.contact,
+main.maintenance {
   width: 500px;
   height: 100%;
   position: fixed;
@@ -1518,4 +1555,34 @@ main.account .wpcf7-response-output {
 .header .header__top .header__cart {
   padding: 0 15px;
   background: #7ac143;
+}
+
+.header .submenu.diagnostico {
+  left: -60px $i;
+}
+
+.header .submenu.instrumental {
+  left: -170px $i;
+}
+
+
+.header .submenu.cuidado {
+  left: -300px $i;
+}
+
+.header .submenu.movilidad {
+  left: -440px $i;
+}
+
+.header .submenu.fisio {
+  left: -540px $i;
+}
+
+
+.header .submenu.linea {
+  left: -650px $i;
+}
+
+.header .submenu.estudiantes {
+  left: -820px $i;
 }

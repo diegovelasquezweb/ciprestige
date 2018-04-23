@@ -29,18 +29,22 @@
                 </li>
 
             <li class="open-submenu" ><a href="<?= get_home_url() ?>/categoria/diagnostico/">Diagnóstico</a>
-            <ul class="submenu short grid">
-              <div class="submenu__container">
-              <?php $wcatTerms = get_terms('product_cat', array('hide_empty' => 0, 'orderby' => 'ASC', 'parent' => 21, ));
+            <ul class="submenu grid short diagnostico">
+                    <div class="submenu__container">
+               <?php $wcatTerms = get_terms('product_cat', array('hide_empty' => 0, 'orderby' => 'ASC', 'parent' => 93, ));
               foreach($wcatTerms as $wcatTerm) : ?>
               <li>
                 <a href="<?php echo get_term_link( $wcatTerm->slug, $wcatTerm->taxonomy ); ?>"><?php echo $wcatTerm->name; ?></a>
               </li>
               <?php endforeach; ?>
-              </div>
-            </ul>
+                    </div>
+                    <?php
+                      if( have_rows('publicidad_menu', 'option') ): while ( have_rows('publicidad_menu_diagnostico', 'option') ) : the_row(); ?>
+                      <div class="sponsor "><a target="_blank" href="<?php the_sub_field('link_menu', 'option'); ?>"><img src="<?php the_sub_field('imagen_menu', 'option'); ?>" alt=""></a></div>
+                        <?php endwhile; endif; ?>
+                  </ul>
           </li>
-            <li class="open-submenu" ><a href="<?= get_home_url() ?>/categoria/instrumental/">Instrumental</a>      <ul class="submenu short grid">
+            <li class="open-submenu" ><a href="<?= get_home_url() ?>/categoria/instrumental/">Instrumental</a>      <ul class="submenu short grid instrumental">
               <div class="submenu__container">
               <?php $wcatTerms = get_terms('product_cat', array('hide_empty' => 0, 'orderby' => 'ASC', 'parent' => 33, ));
               foreach($wcatTerms as $wcatTerm) : ?>
@@ -49,8 +53,12 @@
               </li>
               <?php endforeach; ?>
               </div>
+              <?php
+                      if( have_rows('publicidad_menu', 'option') ): while ( have_rows('publicidad_menu_instrumental', 'option') ) : the_row(); ?>
+                      <div class="sponsor "><a target="_blank" href="<?php the_sub_field('link_menu', 'option'); ?>"><img src="<?php the_sub_field('imagen_menu', 'option'); ?>" alt=""></a></div>
+                        <?php endwhile; endif; ?>
             </ul></li>
-            <li class="open-submenu" ><a href="<?= get_home_url() ?>/categoria/cuidado-en-casa/">Cuidado en casa</a><ul class="submenu short grid">
+            <li class="open-submenu" ><a href="<?= get_home_url() ?>/categoria/cuidado-en-casa/">Cuidado en casa</a><ul class="submenu short grid cuidado">
               <div class="submenu__container">
               <?php $wcatTerms = get_terms('product_cat', array('hide_empty' => 0, 'orderby' => 'ASC', 'parent' => 22, ));
               foreach($wcatTerms as $wcatTerm) : ?>
@@ -59,8 +67,12 @@
               </li>
               <?php endforeach; ?>
               </div>
+              <?php
+                      if( have_rows('publicidad_menu', 'option') ): while ( have_rows('publicidad_menu_cuidado', 'option') ) : the_row(); ?>
+                      <div class="sponsor "><a target="_blank" href="<?php the_sub_field('link_menu', 'option'); ?>"><img src="<?php the_sub_field('imagen_menu', 'option'); ?>" alt=""></a></div>
+                        <?php endwhile; endif; ?>
             </ul></li>
-            <li class="open-submenu" ><a href="<?= get_home_url() ?>/categoria/movilidad/">Movilidad</a><ul class="submenu short grid">
+            <li class="open-submenu" ><a href="<?= get_home_url() ?>/categoria/movilidad/">Movilidad</a><ul class="submenu short grid movilidad">
               <div class="submenu__container">
               <?php $wcatTerms = get_terms('product_cat', array('hide_empty' => 0, 'orderby' => 'ASC', 'parent' => 23, ));
               foreach($wcatTerms as $wcatTerm) : ?>
@@ -69,8 +81,12 @@
               </li>
               <?php endforeach; ?>
               </div>
+              <?php
+                      if( have_rows('publicidad_menu', 'option') ): while ( have_rows('publicidad_menu_movilidad', 'option') ) : the_row(); ?>
+                      <div class="sponsor "><a target="_blank" href="<?php the_sub_field('link_menu', 'option'); ?>"><img src="<?php the_sub_field('imagen_menu', 'option'); ?>" alt=""></a></div>
+                        <?php endwhile; endif; ?>
             </ul></li>
-            <li class="open-submenu" ><a href="<?= get_home_url() ?>/categoria/fisioterapia/">Fisioterapia</a><ul class="submenu short grid">
+            <li class="open-submenu" ><a href="<?= get_home_url() ?>/categoria/fisioterapia/">Fisioterapia</a><ul class="submenu short grid fisio">
               <div class="submenu__container">
               <?php $wcatTerms = get_terms('product_cat', array('hide_empty' => 0, 'orderby' => 'ASC', 'parent' => 34, ));
               foreach($wcatTerms as $wcatTerm) : ?>
@@ -79,8 +95,12 @@
               </li>
               <?php endforeach; ?>
               </div>
+              <?php
+                      if( have_rows('publicidad_menu', 'option') ): while ( have_rows('publicidad_menu_fisio', 'option') ) : the_row(); ?>
+                      <div class="sponsor "><a target="_blank" href="<?php the_sub_field('link_menu', 'option'); ?>"><img src="<?php the_sub_field('imagen_menu', 'option'); ?>" alt=""></a></div>
+                        <?php endwhile; endif; ?>
             </ul></li>
-            <li class="open-submenu" ><a href="<?= get_home_url() ?>/categoria/linea-institucional/">Línea Institucional</a>          <ul class="submenu short grid">
+            <li class="open-submenu" ><a href="<?= get_home_url() ?>/categoria/linea-institucional/">Línea Institucional</a>          <ul class="submenu short grid linea">
               <div class="submenu__container">
               <?php $wcatTerms = get_terms('product_cat', array('hide_empty' => 0, 'orderby' => 'ASC', 'parent' => 35, ));
               foreach($wcatTerms as $wcatTerm) : ?>
@@ -89,8 +109,12 @@
               </li>
               <?php endforeach; ?>
               </div>
+              <?php
+                      if( have_rows('publicidad_menu', 'option') ): while ( have_rows('publicidad_menu_linea', 'option') ) : the_row(); ?>
+                      <div class="sponsor "><a target="_blank" href="<?php the_sub_field('link_menu', 'option'); ?>"><img src="<?php the_sub_field('imagen_menu', 'option'); ?>" alt=""></a></div>
+                        <?php endwhile; endif; ?>
             </ul></li>
-            <li class="open-submenu" ><a href="<?= get_home_url() ?>/categoria/estudiantes/">Estudiantes</a><ul class="submenu short grid">
+            <li class="open-submenu" ><a href="<?= get_home_url() ?>/categoria/estudiantes/">Estudiantes</a><ul class="submenu short grid estudiantes">
               <div class="submenu__container">
               <?php $wcatTerms = get_terms('product_cat', array('hide_empty' => 0, 'orderby' => 'ASC', 'parent' => 24, ));
               foreach($wcatTerms as $wcatTerm) : ?>
@@ -99,6 +123,10 @@
               </li>
               <?php endforeach; ?>
               </div>
+              <?php
+                      if( have_rows('publicidad_menu', 'option') ): while ( have_rows('publicidad_menu_estudiantes', 'option') ) : the_row(); ?>
+                      <div class="sponsor "><a target="_blank" href="<?php the_sub_field('link_menu', 'option'); ?>"><img src="<?php the_sub_field('imagen_menu', 'option'); ?>" alt=""></a></div>
+                        <?php endwhile; endif; ?>
             </ul></li>       
 
 
