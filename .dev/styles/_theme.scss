@@ -162,9 +162,9 @@ body {
             color: $gray;
             font-size: 13px;
             transition: all .3s;
-            padding: 10px 0;
+            padding: 5px 0;
             display: block;
-            font-weight: 600;
+            font-weight: 500;
             text-transform: uppercase;
             &:hover {
               color: $blue;
@@ -173,7 +173,7 @@ body {
         }
       }
       .submenu__container {
-        padding: 15px 30px;
+        padding: 15px 15px;
         flex: 1;
       }
       .sponsor {
@@ -326,6 +326,13 @@ section.featured {
       margin: 20px 0;
       line-height: 120%;
       text-align: left;
+    }
+    .price__container {
+      position: absolute;
+      bottom: 65px;
+      left: 50%;
+      width: 100%;
+      margin-left: -50%;
     }
     .price {
       font-size: 14px;
@@ -1559,6 +1566,15 @@ main.account .wpcf7-response-output {
 
 .header .submenu.diagnostico {
   left: -60px $i;
+  // height: 285px $i;
+  // .submenu__container {
+  //   width: 100%;
+  //   columns: 3 200px;
+  //   height: 285px $i;
+  //   overflow: hidden;
+  //   column-gap: 10px;
+  //   flex: none;
+  // }
 }
 
 .header .submenu.instrumental {
@@ -1569,7 +1585,6 @@ main.account .wpcf7-response-output {
 .header .submenu.cuidado {
   left: -300px $i;
 }
-
 .header .submenu.movilidad {
   left: -440px $i;
 }
@@ -1585,4 +1600,39 @@ main.account .wpcf7-response-output {
 
 .header .submenu.estudiantes {
   left: -820px $i;
+}
+
+#mc_embed_signup,
+#mc_embed_signup_scroll {
+  display: flex;
+  width: 100%;
+  label {
+    display: none;
+  }
+  .mc-field-group,
+  form {
+    width: 100%;
+  }
+}
+
+section.newsletter input[type=submit] {
+  height: 47px;
+}
+
+.page-id-205 div.wpcf7-response-output {
+  color: white;
+}
+
+.summary .stock {
+  display: none;
+}
+
+.woocommerce-billing-fields .obligatorio label:after {
+  content: " *";
+  color: red;
+}
+.payment_box.payment_method_other_payment {
+  label {
+    font-size: 16px;
+  }
 }

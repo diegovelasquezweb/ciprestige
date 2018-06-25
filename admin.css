@@ -1,14 +1,4 @@
-#adminmenuwrap, .role-editor #adminmenuwrap, .role-subscriber #adminmenuwrap {
-    display: none;
-}
 
-#adminmenuback, .role-editor #adminmenuback, .role-subscriber #adminmenuback {
-    display: none;
-}
-
-#wpcontent, .role-editor #wpcontent, .role-subscriber #wpcontent {
-    margin-left: 0;
-}
 
 #wp-admin-bar-wp-logo,
 #wp-admin-bar-comments,
@@ -23,3 +13,14 @@
 .form-field._backorders_field  {
     display: none !important;
 }
+/* #adminmenuwrap, .role-editor #adminmenuwrap, .role-subscriber #adminmenuwrap {
+    display: none;
+}
+
+#adminmenuback, .role-editor #adminmenuback, .role-subscriber #adminmenuback {
+    display: none;
+}
+
+#wpcontent, .role-editor #wpcontent, .role-subscriber #wpcontent {
+    margin-left: 0;
+} */

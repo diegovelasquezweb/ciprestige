@@ -4,18 +4,9 @@
 <li>
     <a href="<?= get_home_url() ?>/">inicio</a>
     </li>
-<?php
-$args = array(
-
-);
-$product_categories = get_terms( 'product_cat', $args );
-$count = count($product_categories);
-if ( $count > 0 ){
-    foreach ( $product_categories as $product_category ) { 
-        echo '<li><a href="' . get_term_link( $product_category ) . '">' . $product_category->name . '</a></li>';
-    }
-} ?>
-
+    <li>
+                  <a href="<?= get_home_url() ?>/tienda"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Tienda</a>
+                </li>
                <div class="separator"></div>
           
                     <li>
@@ -24,9 +15,7 @@ if ( $count > 0 ){
                 <li>
                <a href="" class="catalogo"><i class="fa fa-download "></i> Catálogo digital</a> 
                </li>
-                <li>
-                  <a href="<?= get_home_url() ?>/tienda"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Tienda</a>
-                </li>
+             
                 
                 <li>
                   <a href="<?= get_home_url() ?>/distribuidores"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Distribuidores</a>

@@ -6,7 +6,7 @@ function custom_toolbar_link($wp_admin_bar) {
 	$args = array(
 		'id' => 'dashboard',
 		'title' => 'Escritorio', 
-		'href' => 'http://66.7.216.113/~ciprestige/admin'
+		'href' => 'http://www.ciprestige.com/admin'
 	);
 	$wp_admin_bar->add_node($args);
 }
@@ -17,7 +17,7 @@ function custom_toolbar_link2($wp_admin_bar) {
 	$args = array(
 		'id' => 'page',
 		'title' => 'Ver Pagina', 
-		'href' => 'http://66.7.216.113/~ciprestige',
+		'href' => 'http://www.ciprestige.com',
 		'meta' => array(
 			'target' => '_blank',
 		)

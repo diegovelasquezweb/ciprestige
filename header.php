@@ -17,6 +17,16 @@
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri() . '/assets/images/favicon.png' ?>">
     <?php wp_head(); ?>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118159189-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-118159189-1');
+</script>
+
   </head>
 
   <body <?php body_class(); ?>>
@@ -28,8 +38,8 @@
           <div class="container grid">
             <div class="header__contact grid">
               <a class="open-contact"><i class="fa fa-envelope"></i><span>CONTACTO</span></a>
-              <a href="" class="social--link centerBox"><i class="fa fa-facebook"></i></a>
-              <a href="" class="social--link centerBox"><i class="fa fa-instagram"></i></a>
+              <a href="<?php the_field('facebook','32'); ?>" target="_blank" class="social--link centerBox"><i class="fa fa-facebook"></i></a>
+              <a href="<?php the_field('instagram','32'); ?>" target="_blank" class="social--link centerBox"><i class="fa fa-instagram"></i></a>
               <a target="_blank" href="<?php the_field('catalogo','options') ?>" class="catalogo 11"><i class="fa fa-download "></i><span>Catálogo digital</span></a>
               <a href="<?= get_home_url() ?>/distribuidores" class="dealers"><i class="fa fa-user-circle-o" aria-hidden="true"></i><span>Distribuidores</span></a>
               

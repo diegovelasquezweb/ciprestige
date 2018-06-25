@@ -45,9 +45,10 @@ $count = count($available_variations)-1;
                     $sales_price = $variable_product1 ->sale_price;
                     }
                 ?>
+<div class="price__container">
         <div class="price">
         <?php echo $product->get_price_html(); ?>
-
+        </div>
         </div>
             
            <?php if($product->is_on_sale()) : ?>

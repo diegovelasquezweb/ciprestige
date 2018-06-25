@@ -25,15 +25,6 @@ function myprefix_unregister_tags() {
 }
 add_action('init', 'myprefix_unregister_tags');
 
-add_action('init', function() {
-    register_taxonomy('product_tag', 'product', [
-        'public'            => false,
-        'show_ui'           => false,
-        'show_admin_column' => false,
-        'show_in_nav_menus' => false,
-        'show_tagcloud'     => false,
-    ]);
-}, 100);
 
 /**
  * .. and also remove the column from Products table - it's also hardcoded there.
